@@ -83,10 +83,10 @@ export default function TeacherDashboard() {
           <Card>
             <CardHeader>
               <div className="flex justify-between items-center">
-                <CardTitle>My Courses</CardTitle>
+                <CardTitle>Mening kurslarim</CardTitle>
                 <Button onClick={() => setShowCourseModal(true)}>
                   <Plus className="w-4 h-4 mr-2" />
-                  Create Course
+                  Kurs qo'shish
                 </Button>
               </div>
             </CardHeader>

@@ -50,11 +50,11 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
           <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
             <div className="flex items-center">
               <PlayCircle className="w-4 h-4 mr-1" />
-              <span>{course.lessons} lessons</span>
+              <span>{course.lessons} darslar</span>
             </div>
             <div className="flex items-center">
               <Users className="w-4 h-4 mr-1" />
-              <span>{course.students} students</span>
+              <span>{course.students} o'quvchilar</span>
             </div>
           </div>
         </CardContent>
@@ -64,7 +64,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
               ${course.price}
             </span>
             <Button onClick={handleEnroll} className="bg-primary hover:bg-primary/90">
-              Enroll Now
+              Hoziroq boshlash
             </Button>
           </div>
         </CardFooter>
