@@ -28,7 +28,7 @@ export default function StudentDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900">Student Dashboard</h1>
-            <p className="text-gray-600 mt-2">Track your learning progress and continue your studies</p>
+            <p className="text-gray-600 mt-2">Ilm yo'lingizni tanlang va davom eting</p>
           </div>
 
           {/* Stats Cards */}
@@ -37,7 +37,7 @@ export default function StudentDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Enrolled Courses</p>
+                    <p className="text-sm font-medium text-gray-600">Kursga yozilish</p>
                     <p className="text-3xl font-bold text-primary">{enrolledCourses.length}</p>
                   </div>
                   <Book className="h-8 w-8 text-primary" />
@@ -49,7 +49,7 @@ export default function StudentDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Completed</p>
+                    <p className="text-sm font-medium text-gray-600">Tugatildi</p>
                     <p className="text-3xl font-bold text-accent">{completedCourses.length}</p>
                   </div>
                   <CheckCircle className="h-8 w-8 text-accent" />
@@ -61,7 +61,7 @@ export default function StudentDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">In Progress</p>
+                    <p className="text-sm font-medium text-gray-600">Jarayonda</p>
                     <p className="text-3xl font-bold text-secondary">{inProgressCourses.length}</p>
                   </div>
                   <Clock className="h-8 w-8 text-secondary" />
@@ -73,7 +73,7 @@ export default function StudentDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Progress</p>
+                    <p className="text-sm font-medium text-gray-600">O'smoqda</p>
                     <p className="text-3xl font-bold text-purple-600">{progressPercentage.toFixed(0)}%</p>
                   </div>
                   <TrendingUp className="h-8 w-8 text-purple-600" />
@@ -86,9 +86,9 @@ export default function StudentDashboard() {
           <Card className="mb-8">
             <CardHeader>
               <div className="flex justify-between items-center">
-                <CardTitle>My Courses</CardTitle>
+                <CardTitle>Mening kurslarim</CardTitle>
                 <Button asChild>
-                  <Link href="/courses">Browse More Courses</Link>
+                  <Link href="/courses">Barcha kurslarni ko'rish</Link>
                 </Button>
               </div>
             </CardHeader>
@@ -106,10 +106,10 @@ export default function StudentDashboard() {
               ) : enrolledCourses.length === 0 ? (
                 <div className="text-center py-12">
                   <Book className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">No courses enrolled</h3>
-                  <p className="text-gray-600 mb-4">Start learning by enrolling in your first course</p>
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">Hechqanday kusga yozilinmagan.</h3>
+                  <p className="text-gray-600 mb-4">Birinchi kursingizga yoziling</p>
                   <Button asChild>
-                    <Link href="/courses">Browse Courses</Link>
+                    <Link href="/courses">Ko'zdan kechirish</Link>
                   </Button>
                 </div>
               ) : (
@@ -119,7 +119,7 @@ export default function StudentDashboard() {
                       <CourseCard course={course} />
                       <div className="absolute top-2 right-2">
                         <Button variant="outline" size="sm" asChild>
-                          <Link href={`/courses/${course.id}`}>Continue</Link>
+                          <Link href={`/courses/${course.id}`}>Davom etish</Link>
                         </Button>
                       </div>
                     </div>
@@ -132,29 +132,29 @@ export default function StudentDashboard() {
           {/* Recent Activity */}
           <Card>
             <CardHeader>
-              <CardTitle>Recent Activity</CardTitle>
+              <CardTitle>Oxirgi ishlar</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
                   <div>
-                    <p className="text-sm font-medium">Completed lesson: Introduction to React</p>
-                    <p className="text-xs text-gray-500">2 hours ago</p>
+                    <p className="text-sm font-medium">Tugatilgan darslar: Introduction to React</p>
+                    <p className="text-xs text-gray-500">2 soat oldin</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
                   <div>
-                    <p className="text-sm font-medium">Started new course: Design System with React</p>
-                    <p className="text-xs text-gray-500">1 day ago</p>
+                    <p className="text-sm font-medium">Yangi kursni boshlash: Design System with React</p>
+                    <p className="text-xs text-gray-500">1 kun oldin</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
                   <div>
-                    <p className="text-sm font-medium">Earned certificate: JavaScript Fundamentals</p>
-                    <p className="text-xs text-gray-500">3 days ago</p>
+                    <p className="text-sm font-medium">Olingan sertikatlar: JavaScript Fundamentals</p>
+                    <p className="text-xs text-gray-500">3 kun oldin</p>
                   </div>
                 </div>
               </div>

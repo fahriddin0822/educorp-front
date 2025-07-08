@@ -37,7 +37,7 @@ export default function TeacherDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900">Teacher Dashboard</h1>
-            <p className="text-gray-600 mt-2">Manage your courses and track student progress</p>
+            <p className="text-gray-600 mt-2">Kurslaringizni boshqaring va talabalaringizni kuzatib boring</p>
           </div>
 
           {/* Stats Cards */}
@@ -46,7 +46,7 @@ export default function TeacherDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">My Courses</p>
+                    <p className="text-sm font-medium text-gray-600">Mening kurslarim</p>
                     <p className="text-3xl font-bold text-primary">{teacherCourses.length}</p>
                   </div>
                   <Book className="h-8 w-8 text-primary" />
@@ -58,7 +58,7 @@ export default function TeacherDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Total Students</p>
+                    <p className="text-sm font-medium text-gray-600">Jami talabalar</p>
                     <p className="text-3xl font-bold text-accent">{totalStudents}</p>
                   </div>
                   <Users className="h-8 w-8 text-accent" />
@@ -70,7 +70,7 @@ export default function TeacherDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Average Rating</p>
+                    <p className="text-sm font-medium text-gray-600">O'rtacha reyting</p>
                     <p className="text-3xl font-bold text-secondary">{averageRating.toFixed(1)}</p>
                   </div>
                   <Star className="h-8 w-8 text-secondary" />
@@ -104,11 +104,11 @@ export default function TeacherDashboard() {
               ) : teacherCourses.length === 0 ? (
                 <div className="text-center py-12">
                   <Book className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">No courses yet</h3>
-                  <p className="text-gray-600 mb-4">Create your first course to get started</p>
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">Hozircha kurslar yo'q</h3>
+                  <p className="text-gray-600 mb-4">Boshlash uchun birinchi kursingizni yarating</p>
                   <Button onClick={() => setShowCourseModal(true)}>
                     <Plus className="w-4 h-4 mr-2" />
-                    Create Course
+                    Kurs qo'shish
                   </Button>
                 </div>
               ) : (
@@ -122,7 +122,7 @@ export default function TeacherDashboard() {
                           size="sm"
                           onClick={() => handleEditCourse(course.id)}
                         >
-                          Edit
+                          Tahrirlash
                         </Button>
                       </div>
                     </div>

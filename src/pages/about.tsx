@@ -5,15 +5,7 @@ const About = () => {
   return (
     <div className="bg-white px-6 md:px-16 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
       {/* Left Side */}
-      <div className="md:w-2/3 w-full">
-        {/* Logo Section */}
-        <div className="flex items-center gap-4 mb-6">
-          <img src="/images/logo.png" alt="Educorp Logo" className="w-12 h-12" />
-          <div>
-            <h2 className="text-2xl font-bold text-black">educorp</h2>
-            <p className="text-sm text-gray-600">Jamoangizni rivojlantiring</p>
-          </div>
-        </div>
+      <div className="md:w-2/3 w-full my-14">
 
         {/* Heading and Mission */}
         <h1 className="text-3xl font-bold text-orange-600 mb-2">MAQSADIMIZ</h1>

@@ -96,7 +96,7 @@ export default function AdminDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
-            <p className="text-gray-600 mt-2">Manage courses, teachers, and students</p>
+            <p className="text-gray-600 mt-2">Kurslar, talabalar va ustozlar boshqaruv paneli</p>
           </div>
 
           {/* Stats Cards */}
@@ -105,7 +105,7 @@ export default function AdminDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Total Courses</p>
+                    <p className="text-sm font-medium text-gray-600">Barcha kurslar</p>
                     <p className="text-3xl font-bold text-primary">{courses?.length || 0}</p>
                   </div>
                   <Book className="h-8 w-8 text-primary" />
@@ -117,7 +117,7 @@ export default function AdminDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Total Teachers</p>
+                    <p className="text-sm font-medium text-gray-600">Barcha ustozlar</p>
                     <p className="text-3xl font-bold text-accent">{allTeachers.length}</p>
                   </div>
                   <Users className="h-8 w-8 text-accent" />
@@ -129,7 +129,7 @@ export default function AdminDashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Total Students</p>
+                    <p className="text-sm font-medium text-gray-600">Barcha talabalar</p>
                     <p className="text-3xl font-bold text-secondary">{students.length}</p>
                   </div>
                   <GraduationCap className="h-8 w-8 text-secondary" />
@@ -141,19 +141,19 @@ export default function AdminDashboard() {
           {/* Tabs */}
           <Tabs defaultValue="courses" className="space-y-6">
             <TabsList>
-              <TabsTrigger value="courses">Courses</TabsTrigger>
-              <TabsTrigger value="teachers">Teachers</TabsTrigger>
-              <TabsTrigger value="students">Students</TabsTrigger>
+              <TabsTrigger value="courses">Kurslar</TabsTrigger>
+              <TabsTrigger value="teachers">Ustozlar</TabsTrigger>
+              <TabsTrigger value="students">Talabalar</TabsTrigger>
             </TabsList>
 
             <TabsContent value="courses" className="space-y-6">
               <Card>
                 <CardHeader>
                   <div className="flex justify-between items-center">
-                    <CardTitle>Manage Courses</CardTitle>
+                    <CardTitle>Kurslar boshqaruvi</CardTitle>
                     <Button onClick={() => setShowCourseModal(true)}>
                       <Plus className="w-4 h-4 mr-2" />
-                      Add Course
+                      Kurs qo'shish
                     </Button>
                   </div>
                 </CardHeader>
@@ -184,7 +184,7 @@ export default function AdminDashboard() {
                               <h3 className="font-semibold">{course.name}</h3>
                               <p className="text-sm text-gray-600">{course.description}</p>
                               <div className="flex items-center space-x-2 mt-2">
-                                <Badge variant="outline">{course.students} students</Badge>
+                                <Badge variant="outline">{course.students} talabalar</Badge>
                                 <Badge variant="outline">${course.price}</Badge>
                               </div>
                             </div>
@@ -217,10 +217,10 @@ export default function AdminDashboard() {
               <Card>
                 <CardHeader>
                   <div className="flex justify-between items-center">
-                    <CardTitle>Manage Teachers</CardTitle>
+                    <CardTitle>Ustozlar boshqaruvi</CardTitle>
                     <Button onClick={() => setShowTeacherModal(true)}>
                       <Plus className="w-4 h-4 mr-2" />
-                      Add Teacher
+                      Ustoz qo'shish
                     </Button>
                   </div>
                 </CardHeader>
@@ -271,7 +271,7 @@ export default function AdminDashboard() {
             <TabsContent value="students" className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Manage Students</CardTitle>
+                  <CardTitle>Talabalar boshqaruvi</CardTitle>
                 </CardHeader>
                 <CardContent>
                   {usersLoading ? (
