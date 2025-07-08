@@ -228,7 +228,7 @@ export default function Home() {
 
 						<div className='relative'>
 							<img
-								src='../../public/images/home_edu.png'
+								src='/images/home_edu.png'
 								className='rounded-2xl shadow-xl w-full'
 							/>
 						</div>
@@ -247,27 +247,27 @@ export default function Home() {
 						{[
 							{
 								text: 'Yangi xodimlarni 2 karra tezroq kompaniyaga adaptatsiya qilish',
-								image: '../../public/images/home_edu.png',
+								image: '/images/home_edu.png',
 							},
 							{
 								text: 'Yuqori malakali xodimlar bilimini butun jamoaga tatbiq qilish',
-								image: '../../public/images/image.png',
+								image: '/images/image.png',
 							},
 							{
 								text: 'Xodimlarni rivojlantirishga ajratilgan sarmoyani 3 karra qisqartirish imkoni',
-								image: '../../public/images/image copy.png',
+								image: '/images/image copy.png',
 							},
 							{
 								text: 'Turli viloyatlardagi xodimlarga qulay formatda bilim yetkazish',
-								image: '../../public/images/image copy 2.png',
+								image: '/images/image copy 2.png',
 							},
 							{
 								text: 'Xodimlar vaqtini tejash. Istalgan vaqt, istalgan joydan bilim olish imkoni',
-								image: '../../public/images/image copy 3.png',
+								image: '/images/image copy 3.png',
 							},
 							{
 								text: 'Tizimli ta’limni yo‘lga qo‘yish orqali xodimlar samaradorligini oshirish',
-								image: '../../public/images/image copy 4.png',
+								image: '/images/image copy 4.png',
 							},
 						].map((item, index) => (
 							<div
@@ -315,7 +315,7 @@ export default function Home() {
 							style={{ borderColor: 'var(--primary)' }}
 						>
 							<img
-								src='../../public/images/founder.png'
+								src='/images/founder.png'
 								alt='Founder'
 								className='w-full h-full object-cover'
 							/>
@@ -517,7 +517,7 @@ export default function Home() {
 					</div>
 					<div className='right-side w-full md:w-2/3'>
 						<img
-							src='../../public/images/tech-stack1.png'
+							src='/images/tech-stack1.png'
 							alt="Mahsulot bo'yicha"
 							className='w-full h-auto'
 						/>
@@ -530,7 +530,7 @@ export default function Home() {
 					</div>
 					<div className='right-side w-full md:w-2/3'>
 						<img
-							src='../../public/images/tech-stack2.png'
+							src='/images/tech-stack2.png'
 							alt='Ish jarayonlari bo’yicha'
 							className='w-full h-auto'
 						/>
@@ -552,7 +552,7 @@ export default function Home() {
 						className='block'
 					>
 						<img
-							src='../../public/images/vide_thumbnail4.png' // replace with your image
+							src='/images/vide_thumbnail4.png' // replace with your image
 							alt='Video 1'
 							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
 						/>
@@ -566,7 +566,7 @@ export default function Home() {
 						className='block'
 					>
 						<img
-							src='../../public/images/vide_thumbnail3.png'
+							src='/images/vide_thumbnail3.png'
 							alt='Video 2'
 							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
 						/>
@@ -580,7 +580,7 @@ export default function Home() {
 						className='block'
 					>
 						<img
-							src='../../public/images/vide_thumbnail2.png'
+							src='/images/vide_thumbnail2.png'
 							alt='Video 3'
 							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
 						/>
@@ -594,7 +594,7 @@ export default function Home() {
 						className='block'
 					>
 						<img
-							src='../../public/images/vide_thumbnail.png'
+							src='/images/vide_thumbnail.png'
 							alt='Video 4'
 							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
 						/>
@@ -608,7 +608,7 @@ export default function Home() {
 					O’QUVCHILAR NATIJALARI
 				</p>
 
-				<img src='../../public/images/result_img.png' alt='' />
+				<img src='/images/result_img.png' alt='' />
 			</section>
 
 			{/* EXPERTS WORKING ON YOUR PROJECT */}

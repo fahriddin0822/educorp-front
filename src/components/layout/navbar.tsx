@@ -58,7 +58,7 @@ export default function Navbar() {
 								<div>
 									<img
 										className='w-[50px] overflow-hidden'
-										src='../../../public/images/logo.png'
+										src='..//images/logo.png'
 										alt='logo'
 									/>
 								</div>

@@ -56,14 +56,14 @@
 
 @font-face {
   font-family: 'RobotoBold';
-  src: url('../public/fonts/Roboto_Condensed-Medium.woff2') format('woff2');
+  src: url('/fonts/Roboto_Condensed-Medium.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'RobotoBoldItalic';
-  src: url('../public/fonts/Roboto_Condensed-Italic.woff2') format('woff2');
+  src: url('/fonts/Roboto_Condensed-Italic.woff2') format('woff2');
   font-style: normal;
   font-weight: 900;
 }
