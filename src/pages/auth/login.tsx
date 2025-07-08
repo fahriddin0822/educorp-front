@@ -57,7 +57,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">Sign In</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">Kirish</CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -69,7 +69,7 @@ export default function Login() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="Enter your email" {...field} />
+                      <Input type="email" placeholder="Emailingizni kiriting" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -81,9 +81,9 @@ export default function Login() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
+                    <FormLabel>Parol</FormLabel>
                     <FormControl>
-                      <Input type="password" placeholder="Enter your password" {...field} />
+                      <Input type="password" placeholder="Parolingizni kiriting" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -98,16 +98,16 @@ export default function Login() {
                 {loginMutation.isPending && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
-                Sign In
+                Kirish
               </Button>
             </form>
           </Form>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
-              Don't have an account?{" "}
+              Akountingiz yo'qmi?{" "}
               <Link href="/signup" className="text-primary hover:underline">
-                Sign up
+                Ro'yxatdan o'tish
               </Link>
             </p>
           </div>

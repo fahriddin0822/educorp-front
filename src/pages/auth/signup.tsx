@@ -59,7 +59,7 @@ export default function Signup() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">Sign Up</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">Ro'yxatdan o'tish</CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -69,9 +69,9 @@ export default function Signup() {
                 name="fullName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Full Name</FormLabel>
+                    <FormLabel>Ism familiyangiz</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your full name" {...field} />
+                      <Input placeholder="Ism familiyangizni kiriting" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -85,7 +85,7 @@ export default function Signup() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="Enter your email" {...field} />
+                      <Input type="email" placeholder="Emailingizni kiriting" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -97,9 +97,9 @@ export default function Signup() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
+                    <FormLabel>Parol</FormLabel>
                     <FormControl>
-                      <Input type="password" placeholder="Enter your password" {...field} />
+                      <Input type="password" placeholder="Parolingizni kiriting" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -111,7 +111,7 @@ export default function Signup() {
                 name="role"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Role</FormLabel>
+                    <FormLabel>Kim?</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -119,8 +119,8 @@ export default function Signup() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="student">Student</SelectItem>
-                        <SelectItem value="teacher">Teacher</SelectItem>
+                        <SelectItem value="student">Talaba</SelectItem>
+                        <SelectItem value="teacher">Ustoz</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -136,16 +136,16 @@ export default function Signup() {
                 {signupMutation.isPending && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
-                Sign Up
+                Davom etish
               </Button>
             </form>
           </Form>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
-              Already have an account?{" "}
+              Akountingiz bormi?{" "}
               <Link href="/login" className="text-primary hover:underline">
-                Sign in
+                Kirish
               </Link>
             </p>
           </div>

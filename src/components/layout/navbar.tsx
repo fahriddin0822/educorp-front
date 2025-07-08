@@ -43,7 +43,7 @@ export default function Navbar() {
 	}
 
 	const navigation = [
-		{ name: 'Asossiy', href: '/' },
+		{ name: 'Asosiy', href: '/' },
 		{ name: 'Kurslar', href: '/courses' },
 		{ name: 'Biz haqimizda', href: '/about' },
 	]
@@ -117,7 +117,7 @@ export default function Navbar() {
 										</DropdownMenuItem>
 										<DropdownMenuItem onClick={handleLogout}>
 											<LogOut className='mr-2 h-4 w-4' />
-											Sign Out
+											Chiqish
 										</DropdownMenuItem>
 									</DropdownMenuContent>
 								</DropdownMenu>
@@ -125,10 +125,10 @@ export default function Navbar() {
 						) : (
 							<div className='hidden md:flex items-center space-x-3'>
 								<Button variant='ghost' asChild>
-									<Link href='/login'>Sign In</Link>
+									<Link href='/login'>Kirish</Link>
 								</Button>
 								<Button asChild>
-									<Link href='/signup'>Sign Up</Link>
+									<Link href='/signup'>Ro'yxatdan o'tish</Link>
 								</Button>
 							</div>
 						)}
@@ -158,14 +158,14 @@ export default function Navbar() {
 												className='text-lg font-medium text-gray-700 hover:text-primary'
 												onClick={() => setIsOpen(false)}
 											>
-												Sign In
+												Kirish
 											</Link>
 											<Link
 												href='/signup'
 												className='text-lg font-medium text-gray-700 hover:text-primary'
 												onClick={() => setIsOpen(false)}
 											>
-												Sign Up
+												Ro'yxatdan o'tish
 											</Link>
 											<div className='block min-[350px]:hidden border-t pt-4 mt-4'>
 												<Link
@@ -184,7 +184,7 @@ export default function Navbar() {
 													className='text-lg font-medium text-gray-700 hover:text-primary flex items-center gap-2 mt-2'
 												>
 													<LogOut className='h-5 w-5' />
-													Sign Out
+													Chiqish
 												</button>
 											</div>
 										</>
