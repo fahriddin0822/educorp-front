@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./index.html", "./**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
     extend: {
       borderRadius: {
@@ -10,9 +10,26 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily:{
-        textBold:["RobotoBold", "sans-serif"],
-        textItalic:["RobotoBoldItalic", "sans-serif"],
+      fontFamily: {
+        textBold: ["RobotoBold", "sans-serif"],
+        textItalic: ["RobotoBoldItalic", "sans-serif"],
+        lableBold: ["Montserrat-Bold", "sans-serif"],
+        lableItalic: ["Montserrat-Italic", "sans-serif"],
+        lableBoldItalic: ["Montserrat-BoldItalic", "sans-serif"],
+        lableMediumItalic: ["Montserrat-MediumItalic", "sans-serif"],
+        lableLight:["Montserrat-Light", "sans-serif"],
+        descriptionMedium:["Montserrat-SemiBold", "sans-serif"],
+        textVietnamBold:["BeVietnamPro-Bold", "sans-serif"],
+        textVietnamVietnamMediumItalic:["AnyConv.com__BeVietnamPro-MediumItalic", "sans-serif"],
+        textVietnamSemiBold:["BeVietnamPro-SemiBold", "sans-serif"],
+        textVietnamIBMPlexBold:["AnyConv.com__IBMPlexSans-Bold", "sans-serif"],
+        textVietnamIBMPlexMedium:["AnyConv.com__IBMPlexSans-Medium", "sans-serif"],
+        textVietnamIBMPlexMediumItalic:["AnyConv.com__IBMPlexSans-MediumItalic", "sans-serif"],
+        textVietnamIBMPlexSemiBold:["AnyConv.com__IBMPlexSans-SemiBold", "sans-serif"],
+        textVietnamIBMPlexSemiBoldItalic:["AnyConv.com__IBMPlexSans-SemiBoldItalic", "sans-serif"],
+        textVietnamMedium:["BeVietnamPro-Medium", "sans-serif"],
+        descriptionPoppinsBolt: ["NotoSansJP-Medium.woff2", "sans-serif"],
+        descriptionNotoSansBold: ["NotoSansJP-Bold.woff2", "sans-serif"],
       },
       colors: {
         background: "var(--background)",

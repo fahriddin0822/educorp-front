@@ -8,8 +8,8 @@ const About = () => {
       <div className="md:w-2/3 w-full my-14">
 
         {/* Heading and Mission */}
-        <h1 className="text-3xl font-bold text-orange-600 mb-2">MAQSADIMIZ</h1>
-        <h2 className="text-xl font-semibold mb-6 text-black leading-snug">
+        <h1 className="sm:text-3xl md:text-4xl lg:text-4xl font-lableBold text-primary">MAQSADIMIZ</h1>
+        <h2 className="text-xl font-lableBold mb-6 text-black leading-snug">
           Korporativ ta’limni qulaylashtirish orqali, <br />
           xodimlar rivojlanishiga hissa qo’shish
         </h2>

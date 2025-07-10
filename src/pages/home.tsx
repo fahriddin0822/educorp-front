@@ -21,6 +21,7 @@ import {
 	ChevronLeft,
 } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import { Card, CardContent } from '@/components/ui/card'
 
 const companies = [
 	'Profi pharm service',
@@ -192,18 +193,18 @@ export default function Home() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 						<div>
-							<h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-textBold text-gray-900 mb-6'>
+							<h1 className='sm:text-3xl md:text-4xl lg:text-4xl font-lableBold text-gray-900'>
 								1 OYDA KOMPANIYANGIZDA{' '}
 								<span className='text-primary'>ICHKI AKADEMIYANI</span> YO‘LGA
 								QO‘YIB BERAMIZ
 							</h1>
 
-							<p className='text-base sm:text-lg md:text-xl text-black mb-6 font-textBold'>
+							<p className="sm:text-lg md:text-xl lg:text-xl text-black my-10 font-descriptionMedium">
 								<span className='text-primary'>Smartfon orqali</span>{' '}
 								adaptasiya, malaka oshirish, bilimni baholash, rag‘batlantirish
 							</p>
 
-							<div className='flex flex-col sm:flex-row gap-4 mb-6'>
+							{/* <div className='flex flex-col sm:flex-row gap-4 mb-6'>
 								<div className='flex items-center'>
 									<div className='w-5 h-5 bg-accent rounded-full flex items-center justify-center mr-3'>
 										<Check className='w-3 h-3 text-white' />
@@ -217,11 +218,11 @@ export default function Home() {
 									</div>
 									<span className='text-gray-700'>Texnik jamoa</span>
 								</div>
-							</div>
+							</div> */}
 
 							<div className='w-full sm:w-auto'>
 								<Button size='lg' asChild>
-									<Link href='/signup'>Hoziroq boshlash</Link>
+									<Link href='/signup' className="font-descriptionMedium">Hoziroq boshlang</Link>
 								</Button>
 							</div>
 						</div>
@@ -239,7 +240,7 @@ export default function Home() {
 			{/* Why online education is required? */}
 			<section className='bg-white py-16 lg:py-24'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<h2 className='text-3xl md:text-4xl font-textBold text-gray-900 text-center mb-10 sm:mb-12 leading-snug'>
+					<h2 className='text-3xl md:text-4xl font-lableBold text-gray-900 text-center mb-10 sm:mb-12 leading-snug'>
 						<span className='text-primary'>NIMA UCHUN</span> KOMPANIYALAR <br />
 						ONLAYN TA‘LIMNI YO‘LGA QO‘YADILAR?
 					</h2>
@@ -270,48 +271,48 @@ export default function Home() {
 								image: '/images/image copy 4.png',
 							},
 						].map((item, index) => (
-							<div
-								key={index}
-								className='flex flex-col items-center text-center space-y-4'
-							>
-								<img
-									src={item.image}
-									alt={`Image ${index + 1}`}
-									className='w-full max-w-full h-48 object-cover rounded-xl shadow-md'
-								/>
-								<p className='text-sm sm:text-base text-gray-700 font-medium px-2'>
-									{item.text}
-								</p>
-							</div>
+							<Card key={index} className="hover-lift">
+								<CardContent className="p-0">
+									<img
+										src={item.image}
+										alt={item.text}
+										className="w-full h-48 object-cover rounded-t-lg"
+									/>
+									<div className="p-6">
+										<h3 className="text-xl font-semibold mb-3">{item.text}</h3>
+										{/* <p className="text-muted-foreground">{item.description}</p> */}
+									</div>
+								</CardContent>
+							</Card>
 						))}
 					</div>
 				</div>
 			</section>
 
 			{/* Our purpose */}
-			<section className='py-8'>
-				<div className='container mx-auto flex flex-col lg:flex-row items-center 2xl:px-24'>
-					<div className='left_side w-full lg:w-2/3 mb-8 lg:mb-0 lg:mx-16'>
-						<h2 className='font-textBold text-primary text-lg sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-4'>
+			<section className='py-12'>
+				<div className='container mx-auto flex flex-col lg:flex-row items-center 2xl:px-24 lg:py-16'>
+					<div className='left_side w-full lg:w-1/2 mb-8 lg:mb-0 lg:mx-16'>
+						<h2 className='font-lableBold text-primary text-lg sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-4'>
 							MAQSADIMIZ
 						</h2>
-						<p className='font-textBold text-black text-sm sm:text-base md:text-lg font-bold mb-4'>
+						<p className='font-textVietnamMedium text-black lg:text-2xl sm:text-base md:text-lg font-bold mb-4'>
 							Korporativ ta’limni qulaylashtirish orqali, xodimlar
 							rivojlanishiga hissa qo’shish
 						</p>
-						<p className='font-textItalic text-black text-sm sm:text-base md:text-lg mb-4'>
+						<p className='font-textVietnamMedium text-black lg:text-xl sm:text-base md:text-lg mb-4'>
 							Jamiyat rivojida bizneslarning o’rni katta. Biznes rivojlanishida
 							esa, jamoa eng muhim omildir. Biz kompaniyalar xodimlarini
 							rivojlantirish orqali, bizneslar rivojiga hissa qo’shish uchun
 							yo’lga chiqdik.
 						</p>
-						<p className='font-textItalic text-black text-sm sm:text-base md:text-lg'>
+						<p className='font-textVietnamMedium text-black lg:text-xl sm:text-base md:text-lg'>
 							Habibulloh Karimov, EDUCORP MChJ rahbari
 						</p>
 					</div>
 					<div className='image_side w-full lg:w-1/3 flex justify-center'>
 						<div
-							className='w-3/4 sm:w-2/3 md:w-1/2 aspect-square rounded-full overflow-hidden border-4'
+							className='w-full sm:w-2/3 md:w-1/2 aspect-square rounded-full overflow-hidden border-4'
 							style={{ borderColor: 'var(--primary)' }}
 						>
 							<img
@@ -393,7 +394,7 @@ export default function Home() {
 
 							{/* Step 2 */}
 							<div className='relative lg:mt-14'>
-								<div className='hidden lg:block absolute -bottom-4 left-1/2 transform -translate-x-1/2'>
+								<div className='hidden lg:block absolute -bottom-6 left-1/2 transform -translate-x-1/2'>
 									<div className='w-0 h-0 border-l-4 border-r-4 border-t-8 border-transparent border-t-orange-500'></div>
 								</div>
 								<div className='bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300'>
@@ -506,100 +507,91 @@ export default function Home() {
 			</section>
 
 			{/* Teck stack task */}
-			<section className='py-8 max-w-7xl m-auto my-12 '>
+			<section className='py-8 max-w-7xl m-auto my-12'>
 				<p className='text-center text-2xl md:text-3xl font-textBold mb-6'>
 					TEX TOPSHIRIQ TUZISH
 				</p>
 
-				<div className='wrapper flex flex-col md:flex-row items-center md:items-start md:justify-center gap-4 mb-6'>
-					<div className='left-side font-textBold w-full md:w-1/4 text-center'>
+				<div className='wrapper bg-white rounded shadow-lg hover:shadow-2xl transform transition duration-300 flex flex-col md:flex-row justify-center items-center gap-4 mb-6 min-h-64'>
+					<div className='left-side font-textBold w-full md:w-1/4 text-center flex justify-center items-center text-lg'>
 						<p>Mahsulot bo'yicha</p>
 					</div>
-					<div className='right-side w-full md:w-2/3'>
-						<img
-							src='/images/tech-stack1.png'
-							alt="Mahsulot bo'yicha"
-							className='w-full h-auto'
-						/>
+					<div className='right-side w-full md:w-2/3 flex justify-center items-center'>
+						<div className='border-2 border-black rounded-lg overflow-hidden w-full'>
+							<img
+								src='/images/tech-stack1.png'
+								alt="Mahsulot bo'yicha"
+								className='w-full h-auto'
+							/>
+						</div>
 					</div>
 				</div>
 
-				<div className='wrapper flex flex-col md:flex-row items-center md:items-start md:justify-center gap-4'>
-					<div className='left-side font-textBold w-full md:w-1/4 text-center'>
+				<div className='wrapper bg-white rounded shadow-lg hover:shadow-2xl transform transition duration-300 flex flex-col md:flex-row justify-center items-center gap-4 min-h-64'>
+					<div className='left-side font-textBold w-full md:w-1/4 text-center flex justify-center items-center text-lg'>
 						<p>Ish jarayonlari bo’yicha</p>
 					</div>
-					<div className='right-side w-full md:w-2/3'>
-						<img
-							src='/images/tech-stack2.png'
-							alt='Ish jarayonlari bo’yicha'
-							className='w-full h-auto'
-						/>
+					<div className='right-side w-full md:w-2/3 flex justify-center items-center'>
+						<div className='border-2 border-black rounded-lg overflow-hidden w-full'>
+							<img
+								src='/images/tech-stack2.png'
+								alt='Ish jarayonlari bo’yicha'
+								className='w-full h-auto'
+							/>
+						</div>
 					</div>
 				</div>
 			</section>
 
+
+
+
+
 			{/* Examples of video lessons */}
 			<section className='bg-gray-50'>
-				<p className='text-black font-textBold text-center text-base sm:text-sm md:text-lg lg:text-3xl mb-4  '>
+				<p className='text-black font-textBold text-center text-base sm:text-sm md:text-lg lg:text-3xl mb-4'>
 					VIDEO DARSLIKLARDAN NA’MUNALAR
 				</p>
-				<div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 m-auto max-w-6xl'>
-					{/* Video 1 */}
-					<a
-						href='https://disk.yandex.ru/i/Ljlpr-57SbgzvQ'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='block'
-					>
-						<img
-							src='/images/vide_thumbnail4.png' // replace with your image
-							alt='Video 1'
-							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
-						/>
-					</a>
-
-					{/* Video 2 */}
-					<a
-						href='https://disk.yandex.ru/i/ahcs7BbREC5R5Q'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='block'
-					>
-						<img
-							src='/images/vide_thumbnail3.png'
-							alt='Video 2'
-							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
-						/>
-					</a>
-
-					{/* Video 3 */}
-					<a
-						href='https://disk.yandex.ru/i/eHB9-d_EmgKrgA'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='block'
-					>
-						<img
-							src='/images/vide_thumbnail2.png'
-							alt='Video 3'
-							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
-						/>
-					</a>
-
-					{/* Video 4 */}
-					<a
-						href='https://disk.yandex.ru/i/JVXZMuRyDq5dhg'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='block'
-					>
-						<img
-							src='/images/vide_thumbnail.png'
-							alt='Video 4'
-							className='w-4xl h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
-						/>
-					</a>
+				<div className='container w-full grid grid-cols-1 sm:grid-cols-2 gap-12 m-auto max-w-6xl'>
+					{[
+						{
+							href: 'https://disk.yandex.ru/i/Ljlpr-57SbgzvQ',
+							img: '/images/vide_thumbnail4.png',
+							alt: 'Video 1',
+						},
+						{
+							href: 'https://disk.yandex.ru/i/ahcs7BbREC5R5Q',
+							img: '/images/vide_thumbnail3.png',
+							alt: 'Video 2',
+						},
+						{
+							href: 'https://disk.yandex.ru/i/eHB9-d_EmgKrgA',
+							img: '/images/vide_thumbnail2.png',
+							alt: 'Video 3',
+						},
+						{
+							href: 'https://disk.yandex.ru/i/JVXZMuRyDq5dhg',
+							img: '/images/vide_thumbnail.png',
+							alt: 'Video 4',
+						},
+					].map((video, i) => (
+						<a
+							key={i}
+							href={video.href}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='block hover:shadow-xl rounded-md transform transition duration-300 '
+						>
+							<img
+								src={video.img}
+								alt={video.alt}
+								className='w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-200'
+							/>
+						</a>
+					))}
 				</div>
+
+
 			</section>
 
 			{/* Results of students */}
@@ -665,7 +657,7 @@ export default function Home() {
 			</section>
 
 			{/* Info about services */}
-			<section className='py-16 px-4'>
+			<section className='py-16 px-16'>
 				<div className='max-w-6xl mx-auto'>
 					{/* Header */}
 					<div className='text-center mb-12'>
@@ -680,41 +672,38 @@ export default function Home() {
 					{/* Services Grid */}
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 						{/* Service 1 */}
-						<div className='bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-orange-200'>
-							<div className='w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto'>
+						<div className='bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.00] transition-all duration-300 ease-in-out border border-orange-200'>
+							<div className='w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto transition-all duration-300'>
 								<BookOpen className='w-8 h-8 text-orange-600' />
 							</div>
 							<h3 className='text-lg font-bold text-gray-800 mb-3 text-center'>
 								TAJRIBALI JAMOA
 							</h3>
 							<p className='text-sm text-gray-600 mb-4 text-center'>
-								Vaqtingiz va pulingizni tejaymiz. Andragogika (kattalarni
-								o'qitish) qoldasiga mos darsliklar tayyorlaymniz
+								Vaqtingiz va pulingizni tejaymiz. Andragogika (kattalarni o'qitish) qoidalariga mos darsliklar tayyorlaymiz.
 							</p>
 							<ul className='text-sm text-gray-700 space-y-2'>
 								<li className='flex items-start'>
 									<span className='text-orange-600 mr-2'>•</span>4 yil+ tajriba
 								</li>
 								<li className='flex items-start'>
-									<span className='text-orange-600 mr-2'>•</span>
-									1000+ topshirilgan darsliklar
+									<span className='text-orange-600 mr-2'>•</span>1000+ topshirilgan darsliklar
 								</li>
 								<li className='flex items-start'>
-									<span className='text-orange-600 mr-2'>•</span>
-									Xalqaro kompaniyalar bilan hamkorlik
+									<span className='text-orange-600 mr-2'>•</span>Xalqaro kompaniyalar bilan hamkorlik
 								</li>
 							</ul>
 						</div>
 
 						{/* Service 2 */}
-						<div className='bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-orange-200'>
+						<div className='bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.00] transition-all duration-300 ease-in-out border border-orange-200'>
 							<div className='w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto'>
 								<TrendingUp className='w-8 h-8 text-orange-600' />
 							</div>
 							<h3 className='text-lg font-bold text-gray-800 mb-3 text-center'>
 								"POD KLYUCH" XIZMAT
 							</h3>
-							<p className='text-sm text-gray-600 mb-4 text-center'>
+							<p className='text-sm text-gray-600 mb-4 text-center font-descriptionMedium'>
 								Kompaniyada korporativ o'qituvchi ta'limni yo'lga qo'yishda
 								barcha xizmatlarimiz mavjud:
 							</p>
@@ -747,7 +736,7 @@ export default function Home() {
 						</div>
 
 						{/* Service 3 */}
-						<div className='bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-orange-200'>
+						<div className='bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.00] transition-all duration-300 ease-in-out border border-orange-200'>
 							<div className='w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto'>
 								<Users className='w-8 h-8 text-orange-600' />
 							</div>
@@ -764,7 +753,7 @@ export default function Home() {
 						</div>
 
 						{/* Service 4 */}
-						<div className='bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-orange-200'>
+						<div className='bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.00] transition-all duration-300 ease-in-out border border-orange-200'>
 							<div className='w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto'>
 								<Lightbulb className='w-8 h-8 text-orange-600' />
 							</div>
