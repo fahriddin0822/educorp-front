@@ -21,34 +21,34 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
 
   return (
     <Link href={`/courses/${course.id}`}>
-      <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover flex flex-col"
-            style={{ height: '450px', width: '100%', maxWidth: '360px' }}>
-        <div className="aspect-video relative">
-          <div className="rounded-md overflow-hidden">
+      <Card className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
+            style={{ height: '400px', width: '100%', maxWidth: '300px' }}>
+        <div className="relative">
+          <div className="overflow-hidden">
             <img
               src={course.image}
               alt={course.name}
-              className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+              className="w-full h-48 object-cover"
             />
           </div>
-          <div className="absolute top-4 left-4">
-            <Badge variant="secondary" className="bg-secondary/90 text-secondary-foreground">
+          <div className="absolute top-2 left-2">
+            <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 text-xs font-semibold">
               Best Seller
             </Badge>
           </div>
         </div>
-        <CardContent className="p-6 flex flex-col flex-grow">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">{course.name}</h3>
-          <p className="text-sm text-gray-600 mb-3 line-clamp-3" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        <CardContent className="p-4 flex flex-col flex-grow">
+          <h3 className="text-md font-semibold text-gray-900 mb-2 line-clamp-2">{course.name}</h3>
+          <p className="text-xs text-gray-600 mb-2 line-clamp-2" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {course.description}
           </p>
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center space-x-1">
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm text-gray-600">{(course.rating / 10).toFixed(1)}</span>
+          <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <div className="flex items-center">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 mr-1" />
+              <span>{(course.rating / 10).toFixed(1)}</span>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+          <div className="flex justify-between text-xs text-gray-500">
             <div className="flex items-center">
               <BookOpen className="w-4 h-4 mr-1" />
               <span>{course.lessons} darslar</span>
@@ -59,18 +59,16 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
             </div>
           </div>
         </CardContent>
-        <CardFooter className="p-6 pt-0 mt-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
-            <span className="text-2xl font-bold text-primary">
-              ${course.price}
-            </span>
-            <Button 
-              className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200"
-              onClick={handleEnroll}
-            >
-              Hoziroq boshlash
-            </Button>
-          </div>
+        <CardFooter className="p-4 pt-0 flex flex-col items-start">
+          <span className="text-xl font-bold text-blue-600 mb-2">
+            ${course.price}
+          </span>
+          <Button 
+            className="w-full bg-blue-600 text-white hover:bg-blue-700 text-sm py-1"
+            onClick={handleEnroll}
+          >
+            Hoziroq boshlash
+          </Button>
         </CardFooter>
       </Card>
     </Link>
