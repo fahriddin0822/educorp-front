@@ -1,5 +1,6 @@
 import { Star, Users, BookOpen, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function CoursesSection() {
   const courses = [
@@ -71,6 +72,16 @@ export default function CoursesSection() {
     },
   ];
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <section id="courses" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,7 +143,7 @@ export default function CoursesSection() {
                   <span className="text-2xl font-bold text-primary">
                     ${course.price}
                   </span>
-                  <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200">
+                  <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200" onClick={() => scrollToSection("contact")}>
                     Hoziroq boshlash
                   </Button>
                 </div>

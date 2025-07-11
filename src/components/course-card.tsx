@@ -4,11 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Star, Users, PlayCircle, BookOpen } from "lucide-react";
 import { Course } from "../shared/schema";
 import { Link } from "wouter";
+import { useState } from "react";
 
 interface CourseCardProps {
   course: Course;
   onEnroll?: (courseId: number) => void;
 }
+
+const scrollToSection = (sectionId: string) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+  setIsMobileMenuOpen(false);
+};
 
 export default function CourseCard({ course, onEnroll }: CourseCardProps) {
   const handleEnroll = (e: React.MouseEvent) => {
@@ -59,7 +69,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
             <span className="text-2xl font-bold text-primary">
               ${course.price}
             </span>
-            <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200">
+            <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200" onClick={() => scrollToSection("contact")}>
               Hoziroq boshlash
             </Button>
           </div>
