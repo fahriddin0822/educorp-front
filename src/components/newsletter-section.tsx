@@ -41,8 +41,8 @@ export default function NewsletterSection() {
         <div className="max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
             <Input
-              type="email"
-              placeholder="Email manzilingiz"
+              type="tel"
+              placeholder="Telefon raqamingizni kiriting"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 bg-white text-gray-900 border-none !ring-0 !outline-none focus-visible:!ring-0 focus-visible:!outline-none"
