@@ -53,21 +53,13 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
               <span>{course.students} o'quvchilar</span>
             </div>
           </div>
+        </CardContent>
+        <CardFooter className="p-6 pt-0">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <span className="text-2xl font-bold text-primary">
               ${course.price}
             </span>
             <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200">
-              Hoziroq boshlash
-            </Button>
-          </div>
-        </CardContent>
-        <CardFooter className="p-6 pt-0">
-          <div className="flex items-center justify-between w-full">
-            <span className="text-2xl font-bold text-primary">
-              ${course.price}
-            </span>
-            <Button onClick={handleEnroll} className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200">
               Hoziroq boshlash
             </Button>
           </div>
