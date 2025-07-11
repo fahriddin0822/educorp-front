@@ -14,15 +14,15 @@ export default function NewsletterSection() {
     if (!email) return;
 
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     toast({
       title: "Xabar yuborildi!",
       description: "Tez orada siz bilan bog'lanamiz.",
     });
-    
+
     setEmail("");
     setIsSubmitting(false);
   };
@@ -45,9 +45,10 @@ export default function NewsletterSection() {
               placeholder="Email manzilingiz"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-white text-gray-900 border-none focus:ring-2 focus:ring-white/50"
+              className="flex-1 bg-white text-gray-900 border-none !ring-0 !outline-none focus-visible:!ring-0 focus-visible:!outline-none"
               required
             />
+
             <Button
               type="submit"
               disabled={isSubmitting}

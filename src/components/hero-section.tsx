@@ -19,7 +19,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden"
+      className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-24 pb-16 lg:pt-24 lg:pb-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
@@ -28,12 +28,12 @@ export default function HeroSection() {
               <Star className="w-4 h-4 mr-2" />
               30% chegirma birinchi kursda
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-2xl md:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-6">
               <span className="text-primary">1 OYDA</span> KOMPANIYANGIZDA
               <br />
               ICHKI AKADEMIYANI
               <br />
-              <span className="text-secondary">YO'LGA QO'YIB BERAMIZ</span>
+              <span className="text-secondary">YO'LGA QO'YIB BERAMIZ.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Smartfon orqali adaptasiya, malaka oshirish, bilimni baholash,

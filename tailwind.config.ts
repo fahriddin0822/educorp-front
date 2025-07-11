@@ -62,6 +62,10 @@ export default {
           ring: "var(--sidebar-ring)",
         },
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+      },
       keyframes: {
         "accordion-down": {
           from: {

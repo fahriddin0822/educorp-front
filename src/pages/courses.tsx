@@ -50,7 +50,7 @@ export default function Courses() {
               placeholder="Qidiruv"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10"
+              className="pl-10 flex-1 bg-white text-gray-900 border-none !ring-0 !outline-none focus-visible:!ring-0 focus-visible:!outline-none"
             />
           </div>
         </div>
