@@ -21,7 +21,8 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
 
   return (
     <Link href={`/courses/${course.id}`}>
-      <Card className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
+      <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover flex flex-col"
+            style={{ height: '450px', width: '100%', maxWidth: '360px' }}>
         <div className="aspect-video relative">
           <div className="rounded-md overflow-hidden">
             <img
@@ -36,27 +37,29 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
             </Badge>
           </div>
         </div>
-        <CardContent className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">{course.name}</h3>
-          <p className="text-sm text-gray-600 mb-3">{course.description}</p>
+        <CardContent className="p-6 flex flex-col flex-grow">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">{course.name}</h3>
+          <p className="text-sm text-gray-600 mb-3 line-clamp-3" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {course.description}
+          </p>
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-1">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               <span className="text-sm text-gray-600">{(course.rating / 10).toFixed(1)}</span>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 mb-4">
+          <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
             <div className="flex items-center">
               <BookOpen className="w-4 h-4 mr-1" />
-              <span>{course.lessons} lessons</span>
+              <span>{course.lessons} darslar</span>
             </div>
             <div className="flex items-center">
               <Users className="w-4 h-4 mr-1" />
-              <span>{course.students} students</span>
+              <span>{course.students} talabalar</span>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="p-6 pt-0">
+        <CardFooter className="p-6 pt-0 mt-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
             <span className="text-2xl font-bold text-primary">
               ${course.price}
@@ -65,7 +68,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
               className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200"
               onClick={handleEnroll}
             >
-              Start Now
+              Hoziroq boshlash
             </Button>
           </div>
         </CardFooter>

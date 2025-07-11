@@ -137,15 +137,15 @@ export default function CourseDetail() {
 
                 <div className="space-y-4 mb-8">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Total lessons</span>
+                    <span className="text-gray-600">Darslar soni</span>
                     <span className="font-medium">{course.lessons}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Students enrolled</span>
+                    <span className="text-gray-600">Talabalar soni</span>
                     <span className="font-medium">{course.students}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Rating</span>
+                    <span className="text-gray-600">Reyting</span>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 mr-1" />
                       <span className="font-medium">{course.rating / 10}</span>
@@ -162,7 +162,7 @@ export default function CourseDetail() {
                 </Button>
 
                 <div className="mt-4 text-center text-sm text-gray-500">
-                  30-day money-back guarantee
+                  30-kunda pulni qaytaramiz kafolati
                 </div>
               </CardContent>
             </Card>
