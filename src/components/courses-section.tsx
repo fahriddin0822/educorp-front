@@ -132,7 +132,7 @@ export default function CoursesSection() {
                   <span className="text-2xl font-bold text-primary">
                     ${course.price}
                   </span>
-                  <Button className="bg-primary text-white hover:bg-primary/90 hover-scale">
+                  <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200">
                     Hoziroq boshlash
                   </Button>
                 </div>

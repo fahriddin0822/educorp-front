@@ -21,7 +21,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
 
   return (
     <Link href={`/courses/${course.id}`}>
-      <Card className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
+      <Card className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
         <div className="aspect-video relative">
           <img
             src={course.image}
@@ -63,7 +63,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
             <span className="text-2xl font-bold text-primary">
               ${course.price}
             </span>
-            <Button onClick={handleEnroll} className="bg-primary hover:bg-primary/90">
+            <Button onClick={handleEnroll} className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200">
               Hoziroq boshlash
             </Button>
           </div>
