@@ -21,9 +21,8 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -87,17 +86,21 @@ export default function Navigation() {
                   {id === "home"
                     ? "Bosh sahifa"
                     : id === "about"
-                    ? "Haqida"
-                    : id === "services"
-                    ? "Xizmatlar"
-                    : id === "courses"
-                    ? "Kurslar"
-                    : "Aloqa"}
+                      ? "Haqida"
+                      : id === "services"
+                        ? "Xizmatlar"
+                        : id === "courses"
+                          ? "Kurslar"
+                          : "Aloqa"}
                 </button>
               ))}
-              <Button onClick={() => navigate("/#contact")} className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg font-semibold hover-scale hover:scale-95 transform transition duration-200 border-2 border-primary">
+              <Button>asds</Button>
+              {/* <Button
+                onClick={() => navigate("/#contact")}
+                className="bg-primary text-white hover:bg-black hover:scale-95 transform transition duration-200"
+              >
                 Hoziroq boshlang
-              </Button>
+              </Button> */}
             </div>
           </div>
         )}

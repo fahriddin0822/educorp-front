@@ -46,7 +46,7 @@ body{
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(207, 90%, 54%);
+  --primary: #e56914;
   --primary-foreground: hsl(211, 100%, 99%);
   --secondary: hsl(158, 64%, 52%);
   --secondary-foreground: hsl(0, 0%, 98%);
