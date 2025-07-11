@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollToSection } from "./utils/scrollToTop";
+import { useNavigate } from "react-router-dom";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const scrollToSection = useScrollToSection(); // ✅ Use hook properly here
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,78 +19,52 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center cursor-pointer">
-            <h1 className="text-2xl font-bold text-primary" onClick={() => scrollToSection("home")}>EDUCORP</h1>
+            <h1 className="text-2xl font-bold text-primary" onClick={() => navigate("/#home")}>
+              EDUCORP
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
-              >
+              <button onClick={() => navigate("/#home")} className="text-gray-700 hover:text-primary font-medium">
                 Bosh sahifa
               </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
-              >
+              <button onClick={() => navigate("/#about")} className="text-gray-700 hover:text-primary font-medium">
                 Haqida
               </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
-              >
+              <button onClick={() => navigate("/#services")} className="text-gray-700 hover:text-primary font-medium">
                 Xizmatlar
               </button>
-              <button
-                onClick={() => scrollToSection("courses")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
-              >
+              <button onClick={() => navigate("/#courses")} className="text-gray-700 hover:text-primary font-medium">
                 Kurslar
               </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
-              >
+              <button onClick={() => navigate("/#contact")} className="text-gray-700 hover:text-primary font-medium">
                 Aloqa
               </button>
             </div>
           </div>
 
           <div className="hidden md:block">
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary text-white hover:bg-primary/90 font-medium hover-scale"
-            >
+            <Button onClick={() => scrollToSection("contact")} className="bg-primary text-white font-medium">
               Hoziroq boshlang
             </Button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
+              className="text-gray-700 hover:text-primary"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -97,40 +75,27 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 p-4 shadow-lg">
             <div className="flex flex-col space-y-4">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium text-left"
-              >
-                Bosh sahifa
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium text-left"
-              >
-                Haqida
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium text-left"
-              >
-                Xizmatlar
-              </button>
-              <button
-                onClick={() => scrollToSection("courses")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium text-left"
-              >
-                Kurslar
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium text-left"
-              >
-                Aloqa
-              </button>
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="bg-primary text-white hover:bg-primary/90 font-medium w-full"
-              >
+              {["home", "about", "services", "courses", "contact"].map((id) => (
+                <button
+                  key={id}
+                  onClick={() => {
+                    scrollToSection(id);
+                    setIsMobileMenuOpen(false); // optional: close menu after click
+                  }}
+                  className="text-left text-gray-700 hover:text-primary font-medium"
+                >
+                  {id === "home"
+                    ? "Bosh sahifa"
+                    : id === "about"
+                    ? "Haqida"
+                    : id === "services"
+                    ? "Xizmatlar"
+                    : id === "courses"
+                    ? "Kurslar"
+                    : "Aloqa"}
+                </button>
+              ))}
+              <Button onClick={() => navigate("/#contact")} className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg font-semibold hover-scale hover:scale-95 transform transition duration-200 border-2 border-primary">
                 Hoziroq boshlang
               </Button>
             </div>

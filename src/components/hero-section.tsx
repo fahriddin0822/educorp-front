@@ -61,7 +61,7 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-secondary mr-2" />
-                <span className="text-gray-700 font-medium">To'g'ri o'quv qo'llanmasi</span>
+                <span className="text-gray-700 font-medium">O'quv qo'llanmasi</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-secondary mr-2" />

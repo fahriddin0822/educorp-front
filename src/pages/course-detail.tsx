@@ -162,7 +162,7 @@ export default function CourseDetail() {
                 </Button>
 
                 <div className="mt-4 text-center text-sm text-gray-500">
-                  30-kunda pulni qaytaramiz kafolati
+                  30-kunda pulni qaytarish kafolati
                 </div>
               </CardContent>
             </Card>
