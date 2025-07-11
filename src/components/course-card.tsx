@@ -55,7 +55,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
           </div>
         </CardContent>
         <CardFooter className="p-6 pt-0">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 m-auto">
             <span className="text-2xl font-bold text-primary">
               ${course.price}
             </span>
