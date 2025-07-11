@@ -1,6 +1,5 @@
 import { Link } from 'wouter'
 import { Button } from '@/components/ui/button'
-import { Check } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 import { courseApi } from '@/lib/api'
 import CourseCard from '@/components/course-card'
@@ -35,6 +34,16 @@ const companies = [
 	'SkyNet',
 	'InterLogix',
 ]
+
+const logos = [
+    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5z3nfT5oexkh3mKW-otg7Gn4z9fa9XGzUQ&s', alt: 'Yuksalish maktabi', className: '' },
+    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0EdUDMXFPLPhoF273s1aQu4TLzAmmTWuppg&s', alt:'Registon renaissance school', className: '' },
+    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXrA941lcozc8zkd-2V0JaGdu0lyDUBkU8tw&s', alt: 'Qorako\'l renaissance school', className: '' },
+    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScOpByngvoaFCM0loAGhx3kYpUIy1yj8BZeDITSHfON2t2BJcrx0szIzmHnbqUlZW3MO0&usqp=CAU', alt: 'Thompson school', className: 'novey' },
+	{ src: 'https://api.logobank.uz/media/logos_png/CAMBRIDGE-01.png', alt: 'Cambridge learning centre', className: 'novey' },
+	{ src: 'https://ieltszone.uz/logo-dark.png', alt: 'IELTS zone', className: 'novey' },
+	{ src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScOpByngvoaFCM0loAGhx3kYpUIy1yj8BZeDITSHfON2t2BJcrx0szIzmHnbqUlZW3MO0&usqp=CAU', alt: 'Thompson school', className: 'novey' },
+  ];
 
 const experts = [
 	{
@@ -199,7 +208,7 @@ export default function Home() {
 								QO‘YIB BERAMIZ
 							</h1>
 
-							<p className="sm:text-lg md:text-xl lg:text-xl text-black my-10 font-descriptionMedium">
+							<p className="sm:text-lg md:text-xl lg:text-xl text-black my-10 font-lableItalic">
 								<span className='text-primary'>Smartfon orqali</span>{' '}
 								adaptasiya, malaka oshirish, bilimni baholash, rag‘batlantirish
 							</p>
@@ -780,60 +789,98 @@ export default function Home() {
 			</section>
 
 			{/* Trusted Companies */}
-			<section className='bg-gray-50 py-16'>
-				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<h2 className='text-center text-4xl font-textBold text-gray-900 mb-12'>
-						Bizga ishonch bildirgan kompaniyalar
-					</h2>
-
-					<div className='flex justify-between items-center -mb-9'>
-						<button
-							onClick={prevSlide}
-							className='p-2 rounded-full bg-gray-200 hover:bg-gray-300'
-						>
-							<ChevronLeft />
-						</button>
-						<button
-							onClick={nextSlide}
-							className='p-2 rounded-full bg-gray-200 hover:bg-gray-300'
-						>
-							<ChevronRight />
-						</button>
+			<section className="bg-gray-50 py-16">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center mb-12">
+						<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+							Bizga ishonch bildirgan mijozlarimiz
+						</h2>
+						<p className="text-lg text-gray-600">
+							1000+ tayyorlangan darsliklar soni • 30+ loyihalar
+						</p>
 					</div>
 
-					<div
-						ref={containerRef}
-						className='overflow-hidden w-[92%] m-auto'
-						onMouseDown={e => handleStart(e.clientX)}
-						onMouseMove={e => handleMove(e.clientX)}
-						onMouseUp={handleEnd}
-						onMouseLeave={handleEnd}
-						onTouchStart={e => handleStart(e.touches[0].clientX)}
-						onTouchMove={e => handleMove(e.touches[0].clientX)}
-						onTouchEnd={handleEnd}
-					>
-						<div
-							className='flex transition-transform duration-500 ease-in-out'
-							style={{
-								transform: `translateX(-${currentIndex * itemWidth}px)`,
-								width: `${companies.length * itemWidth}px`,
-							}}
-						>
-							{companies.concat(companies).map((company, index) => (
-								<div
-									key={index}
-									ref={index === 0 ? itemRef : null}
-									className='flex-none px-4'
-									style={{ width: `${itemWidth}px` }}
-								>
-									<div className='text-center text-lg font-semibold text-gray-600'>
-										{company}
-									</div>
+					{/* Top row (left to right) */}
+					<div className="relative overflow-hidden mb-8">
+						<div className="flex animate-scroll-left">
+							{/* Repeat logos 4 times for seamless loop */}
+							{[...Array(4)].map((_, groupIndex) => (
+								<div key={groupIndex} className="flex">
+									{logos.map((logo, index) => (
+										<div
+											key={`${groupIndex}-${index}`}
+											className="flex-none px-4 w-48 h-24 flex items-center justify-center"
+										>
+											<img
+												loading="lazy"
+												src={logo.src}
+												alt={logo.alt}
+												className={`max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 ${logo.className}`}
+											/>
+										</div>
+									))}
+								</div>
+							))}
+						</div>
+					</div>
+
+					{/* Bottom row (right to left) */}
+					<div className="relative overflow-hidden">
+						<div className="flex animate-scroll-right">
+							{/* Repeat logos 4 times for seamless loop */}
+							{[...Array(4)].map((_, groupIndex) => (
+								<div key={groupIndex} className="flex">
+									{[...logos].reverse().map((logo, index) => (
+										<div
+											key={`${groupIndex}-${index}`}
+											className="flex-none px-4 w-48 h-24 flex items-center justify-center"
+										>
+											<img
+												loading="lazy"
+												src={logo.src}
+												alt={logo.alt}
+												className={`max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 ${logo.className}`}
+											/>
+										</div>
+									))}
 								</div>
 							))}
 						</div>
 					</div>
 				</div>
+
+				<style >{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        .animate-scroll-left {
+          animation: scroll-left 20s linear infinite;
+        }
+
+        .animate-scroll-right {
+          animation: scroll-right 20s linear infinite;
+        }
+
+        .animate-scroll-left:hover,
+        .animate-scroll-right:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 			</section>
 
 			{/* For Who? */}
