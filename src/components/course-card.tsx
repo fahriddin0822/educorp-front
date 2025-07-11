@@ -21,7 +21,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
 
   return (
     <Link href={`/courses/${course.id}`}>
-      <Card className="bg-white rounded-xl shadow-md hover:shadow-lg hover:translate-y-4 transition-all duration-300 flex flex-col h-full w-full max-w-sm mx-auto">
+      <Card className="bg-white rounded-xl shadow-md hover:shadow-lg hover:-translate-y-4 transition-all duration-300 flex flex-col h-full w-full max-w-sm mx-auto">
         <div className="relative w-full h-48">
           <img
             src={course.image}
