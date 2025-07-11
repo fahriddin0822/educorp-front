@@ -1,6 +1,7 @@
 import { Star, Users, BookOpen, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import CourseCard from "./course-card";
 
 export default function CoursesSection() {
   const courses = [
@@ -96,60 +97,9 @@ export default function CoursesSection() {
             Barcha kurslar →
           </a>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover"
-
-            >
-              <div className="relative overflow-hidden">
-                <div className="rounded-md overflow-hidden">
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-
-                <div className="absolute top-4 left-4">
-                  <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Best Seller
-                  </span>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                    <span className="text-sm text-gray-600">{course.rating}</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {course.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{course.description}</p>
-                <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 mb-4">
-                  <div className="flex items-center">
-                    <BookOpen className="w-4 h-4 mr-1" />
-                    <span>{course.lessons} darslar</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-1" />
-                    <span>{course.students} o'quvchilar</span>
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                  <span className="text-2xl font-bold text-primary">
-                    ${course.price}
-                  </span>
-                  <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200" onClick={() => scrollToSection("contact")}>
-                    Hoziroq boshlash
-                  </Button>
-                </div>
-
-              </div>
-            </div>
+            <CourseCard key={course.id} course={course} />
           ))}
         </div>
       </div>
