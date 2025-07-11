@@ -2,21 +2,13 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,html}"],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        lableBold: ["Montserrat-Bold", "sans-serif"],
-        lableItalic: ["Montserrat-Italic", "sans-serif"],
-        lableBoldItalic: ["Montserrat-BoldItalic", "sans-serif"],
-        lableMediumItalic: ["Montserrat-MediumItalic", "sans-serif"],
-        lableLight:["Montserrat-Light", "sans-serif"],
-        descriptionMedium:["Poppins-Samibold", "sans-serif"],
       },
       colors: {
         background: "var(--background)",
