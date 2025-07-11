@@ -23,11 +23,13 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
     <Link href={`/courses/${course.id}`}>
       <Card className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
         <div className="aspect-video relative">
-          <img
-            src={course.image}
-            alt={course.name}
-            className="w-full h-full object-cover"
-          />
+          <div className="rounded-md overflow-hidden">
+            <img
+              src={course.image}
+              alt={course.title}
+              className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+            />
+          </div>
           <div className="absolute top-4 left-4">
             <Badge variant="secondary" className="bg-secondary/90 text-secondary-foreground">
               Best Seller
