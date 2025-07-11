@@ -1,24 +1,14 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Star, Users, PlayCircle, BookOpen } from "lucide-react";
+import { Star, Users, BookOpen } from "lucide-react";
 import { Course } from "../shared/schema";
 import { Link } from "wouter";
-import { useState } from "react";
 
 interface CourseCardProps {
   course: Course;
   onEnroll?: (courseId: number) => void;
 }
-
-const scrollToSection = (sectionId: string) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
-  setIsMobileMenuOpen(false);
-};
 
 export default function CourseCard({ course, onEnroll }: CourseCardProps) {
   const handleEnroll = (e: React.MouseEvent) => {
@@ -36,7 +26,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
           <div className="rounded-md overflow-hidden">
             <img
               src={course.image}
-              alt={course.title}
+              alt={course.name}
               className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
@@ -47,30 +37,35 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
           </div>
         </div>
         <CardContent className="p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">{course.name}</h3>
+          <p className="text-sm text-gray-600 mb-3">{course.description}</p>
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-1">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm text-gray-600">{course.rating / 10}</span>
+              <span className="text-sm text-gray-600">{(course.rating / 10).toFixed(1)}</span>
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 mb-4">
             <div className="flex items-center">
               <BookOpen className="w-4 h-4 mr-1" />
-              <span>{course.lessons} darslar</span>
+              <span>{course.lessons} lessons</span>
             </div>
             <div className="flex items-center">
               <Users className="w-4 h-4 mr-1" />
-              <span>{course.students} o'quvchilar</span>
+              <span>{course.students} students</span>
             </div>
           </div>
         </CardContent>
         <CardFooter className="p-6 pt-0">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 m-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
             <span className="text-2xl font-bold text-primary">
               ${course.price}
             </span>
-            <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200" onClick={() => scrollToSection("contact")}>
-              Hoziroq boshlash
+            <Button 
+              className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200"
+              onClick={handleEnroll}
+            >
+              Start Now
             </Button>
           </div>
         </CardFooter>
