@@ -39,17 +39,17 @@ export default function HeroSection() {
               Smartfon orqali adaptasiya, malaka oshirish, bilimni baholash,
               rag'batlantirish
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 items-center">
               <Button
                 onClick={scrollToContact}
-                className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg font-semibold hover-scale"
+                className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg font-semibold hover-scale hover:scale-105 transform transition duration-200 border-2 border-primary"
               >
                 Hoziroq boshlang
               </Button>
               <Button
                 onClick={scrollToAbout}
                 variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg font-semibold hover-scale"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg font-semibold hover-scale hover:scale-105 transform transition duration-200"
               >
                 Batafsil ma'lumot
               </Button>
@@ -57,15 +57,15 @@ export default function HeroSection() {
             <div className="flex items-center space-x-8">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-secondary mr-2" />
-                <span className="text-gray-700 font-medium">Flexible</span>
+                <span className="text-gray-700 font-medium">Qulay vaqt</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-secondary mr-2" />
-                <span className="text-gray-700 font-medium">Learning path</span>
+                <span className="text-gray-700 font-medium">To'g'ri o'quv qo'llanmasi</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-secondary mr-2" />
-                <span className="text-gray-700 font-medium">Community</span>
+                <span className="text-gray-700 font-medium">Jamoaviy qo'llash</span>
               </div>
             </div>
           </div>

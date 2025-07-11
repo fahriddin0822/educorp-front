@@ -118,7 +118,7 @@ export default function CoursesSection() {
                   {course.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{course.description}</p>
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center">
                     <BookOpen className="w-4 h-4 mr-1" />
                     <span>{course.lessons} darslar</span>
@@ -128,7 +128,7 @@ export default function CoursesSection() {
                     <span>{course.students} o'quvchilar</span>
                   </div>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                   <span className="text-2xl font-bold text-primary">
                     ${course.price}
                   </span>
@@ -136,6 +136,7 @@ export default function CoursesSection() {
                     Hoziroq boshlash
                   </Button>
                 </div>
+
               </div>
             </div>
           ))}

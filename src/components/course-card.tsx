@@ -43,21 +43,23 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
               <span className="text-sm text-gray-600">{course.rating / 10}</span>
             </div>
           </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
-            {course.name}
-          </h3>
-          <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-            {course.description}
-          </p>
-          <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+          <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 mb-4">
             <div className="flex items-center">
-              <PlayCircle className="w-4 h-4 mr-1" />
+              <BookOpen className="w-4 h-4 mr-1" />
               <span>{course.lessons} darslar</span>
             </div>
             <div className="flex items-center">
               <Users className="w-4 h-4 mr-1" />
               <span>{course.students} o'quvchilar</span>
             </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <span className="text-2xl font-bold text-primary">
+              ${course.price}
+            </span>
+            <Button className="bg-primary text-white hover:bg-primary/90 hover:scale-105 transform transition duration-200">
+              Hoziroq boshlash
+            </Button>
           </div>
         </CardContent>
         <CardFooter className="p-6 pt-0">
