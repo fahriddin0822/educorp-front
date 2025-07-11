@@ -37,8 +37,8 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
             </Badge>
           </div>
         </div>
-        <CardContent className="p-4 flex flex-col flex-grow">
-          <h3 className="text-md font-semibold text-gray-900 mb-2 line-clamp-2">{course.name}</h3>
+        <CardContent className="p-4 flex flex-col flex-grow m-auto">
+          <h3 className="text-md font-semibold text-gray-900 mb-2 line-clamp-1" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>{course.name}</h3>
           <p className="text-xs text-gray-600 mb-2 line-clamp-2" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {course.description}
           </p>
