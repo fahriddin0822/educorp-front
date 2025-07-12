@@ -25,6 +25,10 @@ export default {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
+        'primary-hover': {
+          DEFAULT: "var(--primary-hover)",
+          foreground: "var(--primary-foreground)",
+        },
         primaryDimmed: {
           DEFAULT: "var(--primary-dimmed)",
           foreground: "var(--primary-foreground)",
@@ -67,8 +71,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        heading: ['Montserrat', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

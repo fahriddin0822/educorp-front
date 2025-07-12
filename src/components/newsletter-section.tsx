@@ -29,7 +29,7 @@ export default function NewsletterSection() {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-tl from-primary to-secondary clip-skew" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary clip-skew" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Biz bilan aloqa</h2>

@@ -29,15 +29,15 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       <Navigation />
       <section id="home">
         <HeroSection />
       </section>
       <CompaniesSection />
       <section id="about">
-        <FeaturesSection />
         <MissionSection />
+        <FeaturesSection />
       </section>
       <section id="services">
         <ProcessSection />

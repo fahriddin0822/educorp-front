@@ -70,7 +70,7 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
             ${course.price.toFixed(2)}
           </span>
           <Button
-            className="w-full bg-primary text-white hover:bg-blue-700 text-sm py-2"
+            className="w-full bg-primary text-white hover:bg-orange-500 transform transition-all duration-300 text-sm py-2"
             onClick={handleEnroll}
           >
             Hoziroq boshlash

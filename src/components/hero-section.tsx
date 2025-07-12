@@ -19,21 +19,22 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-24 pb-16 lg:pt-24 lg:pb-24 overflow-hidden"
+      className=" pt-24 pb-16 lg:pt-24 lg:pb-24 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <div className="animate-fade-in">
             <div className="inline-flex items-center bg-primary text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
               30% chegirma birinchi kursda
             </div>
-            <h1 className="text-2xl md:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-6">
-              <span className="text-primary">1 OYDA</span> KOMPANIYANGIZDA
+            <h1 className="text-2xl md:text-5xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6">
+              1 OYDA KOMPANIYANGIZDA
               <br />
-              ICHKI AKADEMIYANI
-              <br />
-              <span className="text-secondary">YO'LGA QO'YIB BERAMIZ.</span>
+              <span className="text-primary">ICHKI AKADEMIYANI </span>
+
+              <span className="">YO'LGA
+                <br /> QO'YIB BERAMIZ.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Smartfon orqali adaptasiya, malaka oshirish, bilimni baholash,
@@ -56,15 +57,15 @@ export default function HeroSection() {
             </div>
             <div className="flex items-center space-x-8">
               <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-secondary mr-2" />
+                <CheckCircle className="w-5 h-5 text-primary mr-2" />
                 <span className="text-gray-700 font-medium">Qulay vaqt</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-secondary mr-2" />
+                <CheckCircle className="w-5 h-5 text-primary mr-2" />
                 <span className="text-gray-700 font-medium">O'quv qo'llanmasi</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-secondary mr-2" />
+                <CheckCircle className="w-5 h-5 text-primary mr-2" />
                 <span className="text-gray-700 font-medium">Jamoaviy qo'llash</span>
               </div>
             </div>

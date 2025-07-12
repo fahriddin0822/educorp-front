@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  @apply font-sans;
 }
 
 @layer components {
@@ -50,6 +49,7 @@ body{
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
   --primary: hsl(20, 82%, 49%);
+  --primary-hover: hsla(20, 82%, 49%, 0.726);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(240, 3.7%, 15.9%);
   --secondary-foreground: hsl(0, 0%, 98%);
@@ -138,6 +138,7 @@ body{
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -148,6 +149,7 @@ body{
     transform: translateY(30px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -159,6 +161,7 @@ body{
     transform: translateX(-30px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -166,9 +169,12 @@ body{
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -179,130 +185,37 @@ body{
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('./Montserrat-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('./Montserrat-BoldItalic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('./Montserrat-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-/* @font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-MediumItalic.woff2') format('woff2');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-SemiBoldItalic.woff2') format('woff2');
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-BoldItalic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('./Poppins-ExtraBold.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
-} */
-
-@font-face {
-  font-family: 'Inter';
-  src: url('./Inter-VariableFont_opsz,wght.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('./Inter-Italic-VariableFont_opsz,wght.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
-}
-
-
 .animate-fadeInUp {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
 /* Scrollbar Styling */
+/* Set the scrollbar width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
+/* Scrollbar track (make it transparent) */
 ::-webkit-scrollbar-track {
-  background: hsl(220, 13%, 97%);
+  background: transparent;
 }
 
+/* Scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: hsl(207, 90%, 54%);
-  border-radius: 4px;
+  background: var(--primary);
+  border-radius: 12px;
 }
 
+/* Thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(198, 69%, 46%);
+  background: #ff7c1f;
 }
 
 /* Mobile responsive adjustments */

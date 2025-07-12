@@ -21,12 +21,11 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
-        }`}
+      className={`fixed w-full z-50 transition-all duration-100 ${isScrolled ? "bg-white/95 shadow-sm" : "bg-transparent"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className='flex items-center gap-3 cursor-pointer'>
+          <div className='flex items-center gap-3 cursor-pointer' onClick={() => navigate("/#home")}>
             <div>
               <img
                 className='w-[50px] overflow-hidden'
@@ -45,26 +44,26 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button onClick={() => navigate("/#home")} className="text-gray-700 hover:text-primary font-medium">
+              <button onClick={() => navigate("/#home")} className="text-gray-700 hover:text-primary font-medium transition-colors duration-200">
                 Bosh sahifa
               </button>
-              <button onClick={() => navigate("/#about")} className="text-gray-700 hover:text-primary font-medium">
-                Haqida
+              <button onClick={() => navigate("/#about")} className="text-gray-700 hover:text-primary font-medium transition-colors duration-200">
+                Haqimizda
               </button>
-              <button onClick={() => navigate("/#services")} className="text-gray-700 hover:text-primary font-medium">
+              <button onClick={() => navigate("/#services")} className="text-gray-700 hover:text-primary font-medium transition-colors duration-200">
                 Xizmatlar
               </button>
-              <button onClick={() => navigate("/#courses")} className="text-gray-700 hover:text-primary font-medium">
+              <button onClick={() => navigate("/#courses")} className="text-gray-700 hover:text-primary font-medium transition-colors duration-200">
                 Kurslar
               </button>
-              <button onClick={() => navigate("/#contact")} className="text-gray-700 hover:text-primary font-medium">
+              <button onClick={() => navigate("/#contact")} className="text-gray-700 hover:text-primary font-medium transition-colors duration-200">
                 Aloqa
               </button>
             </div>
           </div>
 
           <div className="hidden md:block">
-            <Button onClick={() => scrollToSection("contact")} className="bg-primary text-white font-medium">
+            <Button onClick={() => scrollToSection("contact")} className="bg-primary text-white font-medium hover:scale-100 hover:bg-orange-500 transform transition-all duration-300">
               Hoziroq boshlang
             </Button>
           </div>
