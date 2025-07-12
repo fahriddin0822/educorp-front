@@ -37,11 +37,11 @@ export default function Home() {
       <CompaniesSection />
       <section id="about">
         <FeaturesSection />
-      </section>
-      <section id="services">
         <MissionSection />
       </section>
-      <ProcessSection />
+      <section id="services">
+        <ProcessSection />
+      </section>
       <section id="courses">
         <CoursesSection />
         <TeamSection />
