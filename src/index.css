@@ -8,6 +8,12 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+@layer components {
+  .border-border {
+    border: 0px solid;
+  }
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(20, 14.3%, 4.1%);
@@ -19,20 +25,17 @@ body{
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(158, 64%, 52%);
+  --primary: hsl(20, 82%, 49%);
+  --primary-dimmed: hsla(20, 82%, 49%, 0.329);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(43, 96%, 56%);
   --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(43, 96%, 56%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(142, 71%, 45%);
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
-  --neutral-light: hsl(220, 13%, 97%);
-  --neutral-dark: hsl(220, 13%, 18%);
-  --gradient-primary: linear-gradient(135deg, hsl(207, 90%, 54%) 0%, hsl(198, 69%, 46%) 100%);
-  --gradient-secondary: linear-gradient(135deg, hsl(158, 64%, 52%) 0%, hsl(147, 50%, 47%) 100%);
 }
 
 .dark {
@@ -46,18 +49,16 @@ body{
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: #e56914;
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(158, 64%, 52%);
+  --primary: hsl(20, 82%, 49%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
   --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(43, 96%, 56%);
+  --accent: hsl(240, 3.7%, 15.9%);
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(0, 0%, 98%);
   --ring: hsl(240, 4.9%, 83.9%);
   --radius: 0.5rem;
-  --neutral-light: hsl(240, 3.7%, 15.9%);
-  --neutral-dark: hsl(240, 10%, 3.9%);
 }
 
 @layer base {

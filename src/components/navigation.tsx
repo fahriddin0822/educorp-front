@@ -26,10 +26,20 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center cursor-pointer">
-            <h1 className="text-2xl font-bold text-primary" onClick={() => navigate("/#home")}>
-              EDUCORP
-            </h1>
+          <div className='flex items-center gap-3 cursor-pointer'>
+            <div>
+              <img
+                className='w-[50px] overflow-hidden'
+                src='../images/logo.png'
+                alt='logo'
+              />
+            </div>
+            <div>
+              <h1 className='text-3xl font-bold text-black hover:text-primary transition-colors'>
+                educorp
+              </h1>
+              <p className='text-[10px]'>Jamoangizni rivojlantiring</p>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

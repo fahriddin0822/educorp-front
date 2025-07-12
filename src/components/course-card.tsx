@@ -57,20 +57,20 @@ export default function CourseCard({ course, onEnroll }: CourseCardProps) {
           <div className="flex justify-between text-sm text-gray-500">
             <div className="flex items-center">
               <BookOpen className="w-4 h-4 mr-1" />
-              <span>{course.lessons} lessons</span>
+              <span>{course.lessons} darslar</span>
             </div>
             <div className="flex items-center">
               <Users className="w-4 h-4 mr-1" />
-              <span>{course.students} students</span>
+              <span>{course.students} talabalar</span>
             </div>
           </div>
         </CardContent>
         <CardFooter className="p-4 pt-0 flex flex-col items-start gap-3">
-          <span className="text-xl font-bold text-blue-600">
+          <span className="text-xl font-bold text-primary">
             ${course.price.toFixed(2)}
           </span>
           <Button
-            className="w-full bg-blue-600 text-white hover:bg-blue-700 text-sm py-2"
+            className="w-full bg-primary text-white hover:bg-blue-700 text-sm py-2"
             onClick={handleEnroll}
           >
             Hoziroq boshlash
