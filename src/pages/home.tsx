@@ -10,6 +10,9 @@ import ProcessSection from "@/components/process-section";
 import CoursesSection from "@/components/courses-section";
 import TeamSection from "@/components/team-section";
 import NewsletterSection from "@/components/newsletter-section";
+import ExpertsSection from "@/components/experts-section";
+import ProfitsSection from "@/components/profits-section";
+import ForWho from "@/components/for-who";
 
 export default function Home() {
   const location = useLocation();
@@ -34,17 +37,19 @@ export default function Home() {
       <section id="home">
         <HeroSection />
       </section>
-      <CompaniesSection />
+        <CompaniesSection />
       <section id="about">
+        <ProfitsSection/>
         <MissionSection />
         <FeaturesSection />
+        <ExpertsSection/>
+        <ForWho/>
       </section>
       <section id="services">
         <ProcessSection />
       </section>
       <section id="courses">
         <CoursesSection />
-        <TeamSection />
       </section>
       <section id="contact">
         <NewsletterSection />

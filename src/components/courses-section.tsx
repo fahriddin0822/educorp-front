@@ -24,8 +24,8 @@ export default function CoursesSection() {
   const handleEnroll = (courseId: number) => {
     if (!user) {
       toast({
-        title: "Authentication Required",
-        description: "Please sign in to enroll in courses",
+        title: "Ro'yxatdan o'tishingiz kerak",
+        description: "Iltimos kursga yozilish uchun ro'yxatdan o'ting",
         variant: "destructive",
       });
       return;
@@ -33,8 +33,8 @@ export default function CoursesSection() {
 
     // TODO: Call enrollment API here
     toast({
-      title: "Enrollment Successful",
-      description: "You have been enrolled in the course!",
+      title: "Kursga muvaffaqiyatli yozildingiz",
+      description: "Siz kursga muvaffaqiyatli yozildingiz",
     });
   };
 

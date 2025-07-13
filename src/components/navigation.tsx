@@ -34,7 +34,7 @@ export default function Navigation() {
               />
             </div>
             <div>
-              <h1 className='text-3xl font-bold text-black hover:text-primary transition-colors'>
+              <h1 className='text-3xl font-bold text-primary hover:text-orange-500 transition-colors'>
                 educorp
               </h1>
               <p className='text-[10px]'>Jamoangizni rivojlantiring</p>
@@ -103,7 +103,7 @@ export default function Navigation() {
                           : "Aloqa"}
                 </button>
               ))}
-              <Button>asds</Button>
+              <Button onClick={()=>{navigate("/#contact");setIsMobileMenuOpen(false)}}>Hoziroq boshlash</Button>
               {/* <Button
                 onClick={() => navigate("/#contact")}
                 className="bg-primary text-white hover:bg-black hover:scale-95 transform transition duration-200"

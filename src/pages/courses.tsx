@@ -31,10 +31,10 @@ export default function Courses() {
       });
       return;
     }
-    
+
     toast({
-      title: "Enrollment Successful",
-      description: "You have been enrolled in the course!",
+      title: "Ro'yxatdan o'tishingiz kerak",
+      description: "Iltimos kursga yozilish uchun ro'yxatdan o'ting",
     });
   };
 
