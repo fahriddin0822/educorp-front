@@ -77,12 +77,12 @@ const experts = [
                 </div>
             </section>
             <section className='py-8 max-w-7xl m-auto my-12'>
-                <p className='text-center text-2xl md:text-3xl font-textBold mb-6'>
+                <p className='text-center text-2xl md:text-3xl font-bold mb-6'>
                     TEX TOPSHIRIQ TUZISH
                 </p>
 
                 <div className='wrapper bg-white rounded shadow-lg hover:shadow-2xl transform transition duration-300 flex flex-col md:flex-row justify-center items-center gap-4 mb-6 min-h-64'>
-                    <div className='left-side font-textBold w-full md:w-1/4 text-center flex justify-center items-center text-lg'>
+                    <div className='left-side font-bold w-full md:w-1/4 text-center flex justify-center items-center text-lg'>
                         <p>Mahsulot bo'yicha</p>
                     </div>
                     <div className='right-side w-full md:w-2/3 flex justify-center items-center'>
@@ -97,7 +97,7 @@ const experts = [
                 </div>
 
                 <div className='wrapper bg-white rounded shadow-lg hover:shadow-2xl transform transition duration-300 flex flex-col md:flex-row justify-center items-center gap-4 min-h-64'>
-                    <div className='left-side font-textBold w-full md:w-1/4 text-center flex justify-center items-center text-lg'>
+                    <div className='left-side font-bold w-full md:w-1/4 text-center flex justify-center items-center text-lg'>
                         <p>Ish jarayonlari bo’yicha</p>
                     </div>
                     <div className='right-side w-full md:w-2/3 flex justify-center items-center'>
