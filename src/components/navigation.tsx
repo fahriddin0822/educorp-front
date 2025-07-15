@@ -172,7 +172,7 @@ export default function Navigation() {
                       <Link to='/login'>Kirish</Link>
                     </button>
                     
-                    <button className="text-left text-gray-700 hover:text-primary font-medium">
+                    <button className="text-left text-gray-700 hover:text-primary font-medium mt-3">
                       <Link to='/signup'>Ro'yxatdan o'tish</Link>
                     </button>
                   </div>
