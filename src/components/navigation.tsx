@@ -135,8 +135,8 @@ export default function Navigation() {
                   <button
                     key={id}
                     onClick={() => {
-                      scrollToSection(id);
                       setIsOpen(false);
+                      navigate(`/#${id}`);
                     }}
                     className="text-left text-gray-700 hover:text-primary font-medium"
                   >
