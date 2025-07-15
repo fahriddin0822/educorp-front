@@ -6,15 +6,18 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(authStorage.getUser());
+  const [forceRefresh, setForceRefresh] = useState(0);
 
   const login = (userData) => {
     authStorage.setUser(userData);
     setUser(userData);
+    setForceRefresh((prev) => prev + 1);
   };
 
   const logout = () => {
     authStorage.clearUser();
     setUser(null);
+    setForceRefresh((prev) => prev + 1);
   };
 
   useEffect(() => {
@@ -22,7 +25,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, forceRefresh }}>
       {children}
     </AuthContext.Provider>
   );

@@ -10,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { authStorage } from "@/lib/auth";
 import { Link } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 
@@ -33,7 +32,7 @@ export default function Navigation() {
 
   const handleLogout = () => {
     logout();
-    navigate("/"); 
+    navigate("/");
   };
 
   const getDashboardPath = () => {
@@ -168,15 +167,15 @@ export default function Navigation() {
                     </button>
                   </>
                 ) : (
-                  <Button
-                    onClick={() => {
-                      scrollToSection("contact");
-                      setIsOpen(false);
-                    }}
-                    className="bg-primary text-white hover:bg-orange-500"
-                  >
-                    Hoziroq boshlang
-                  </Button>
+                  <div className='items-start flex flex-col'>
+                    <button className="text-left text-gray-700 hover:text-primary font-medium">
+                      <Link to='/login'>Kirish</Link>
+                    </button>
+                    
+                    <button className="text-left text-gray-700 hover:text-primary font-medium">
+                      <Link to='/signup'>Ro'yxatdan o'tish</Link>
+                    </button>
+                  </div>
                 )}
               </div>
             </SheetContent>
