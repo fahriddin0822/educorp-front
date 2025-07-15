@@ -168,11 +168,11 @@ export default function Navigation() {
                   </>
                 ) : (
                   <div className='items-start flex flex-col'>
-                    <button className="text-left text-gray-700 hover:text-primary font-medium">
+                    <button className="text-left text-gray-700 hover:text-primary font-medium" onClick={()=>setIsOpen(false)}>
                       <Link to='/login'>Kirish</Link>
                     </button>
                     
-                    <button className="text-left text-gray-700 hover:text-primary font-medium mt-3">
+                    <button className="text-left text-gray-700 hover:text-primary font-medium mt-3" onClick={()=>setIsOpen(false)}>
                       <Link to='/signup'>Ro'yxatdan o'tish</Link>
                     </button>
                   </div>
