@@ -5,14 +5,14 @@ export default function FeaturesSection() {
       description:
         "Tizimli yondashuv orqali yangi xodimlar kompaniya madaniyati va jarayonlariga tez moslashadi.",
       image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+        "/images/feature1.jpg",
     },
     {
       title: "Yuqori malakali xodimlar bilimini butun jamoaga tatbiq qilish",
       description:
         "Eng yaxshi tajribalar barcha xodimlar o'rtasida tez va samarali tarqatiladi.",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+        "/images/feature2.jpg",
     },
     {
       title:
@@ -20,7 +20,7 @@ export default function FeaturesSection() {
       description:
         "Onlayn ta'lim an'anaviy usullarga nisbatan juda arzon va samarali.",
       image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+        "/images/feature3.jpg",
     },
     {
       title:
@@ -28,7 +28,7 @@ export default function FeaturesSection() {
       description:
         "Geografik chegaralar muhim emas - barcha xodimlar bir xil sifatli ta'lim oladi.",
       image:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+        "/images/feature4.jpg",
     },
     {
       title:
@@ -36,15 +36,15 @@ export default function FeaturesSection() {
       description:
         "Moslashuvchan jadval va uzoq masofadan o'rganish imkoniyati.",
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+        "/images/feature5.jpg",
     },
     {
       title:
         "Tizimli ta'limni yo'lga qo'yish orqali xodimlar samaradorligini oshirish",
       description: "Doimiy ta'lim jarayoni xodimlar malakasini muntazam oshiradi.",
       image:
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-    },
+        "/images/feature6.jpg",
+    }
   ];
 
   return (
