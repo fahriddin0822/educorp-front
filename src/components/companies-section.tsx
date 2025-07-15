@@ -30,12 +30,12 @@ export default function CompaniesSection() {
   const infiniteCompanies = [...companies, ...companies, ...companies];
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h3 className="text-lg font-semibold text-gray-500 mb-8">
+        <h3 className="text-2xl font-semibold text-gray-500 mb-2">
           Bizga ishonch bildirgan mijozlarimiz
         </h3>
-        <p className="text-sm text-gray-400 mb-8">
+        <p className="text-md text-gray-400 mb-8">
           1000+ tayyorlangan darsliklar soni • 30+ loyihalar
         </p>
         
@@ -50,7 +50,7 @@ export default function CompaniesSection() {
                 <img
                   src={company.logo}
                   alt={company.name}
-                  className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
+                  className="h-20 p-3 w-auto grayscale hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
                 />
               </div>
             ))}

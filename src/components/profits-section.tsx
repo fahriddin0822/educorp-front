@@ -10,7 +10,7 @@ export default function ProfitsSection() {
                     <h2 className='text-4xl font-bold text-gray-800 mb-4'>
                         NIMA UCHUN EDUCORP?
                     </h2>
-                    <p className='text-xl text-gray-600 font-semibold'>
+                    <p className='text-md text-gray-600 font-semibold'>
                         KOMPANIYANGIZGA QANDAY QIYMAT KELTIRAMIZ?
                     </p>
                 </div>
